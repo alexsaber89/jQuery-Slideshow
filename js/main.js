@@ -1,22 +1,29 @@
-var container = $("#container");
-
 function previousImage() {
   console.log("previous image");
   var currentImage = $( "img.visible" );
   currentImage.removeClass("visible");
-  currentImage.prev().addClass("visible");
+  if (currentImage.prev().length === 0) {
+    $("#container img:last").addClass("visible");
+  } else {
+    currentImage.prev().addClass("visible");
+  }
 }
 
 function nextImage() {
   console.log("next image");
   var currentImage = $( "img.visible" );
   currentImage.removeClass("visible");
-  currentImage.next().addClass("visible");
+  if (currentImage.next().length === 0) {
+    $("#container img:first").addClass("visible");
+  } else {
+    currentImage.next().addClass("visible");
+  }
 }
 
 $(".prev_button").click(previousImage);
 $(".next_button").click(nextImage);
 
+// var container = $("#container");
 // var counter = 0;
 // var imgArray = [
 //   "../img/chalkley_1.png",
