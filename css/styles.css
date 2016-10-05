@@ -15,7 +15,7 @@ body {
 }
 
 #button-wrapper {
-  margin: 0 auto;
+  margin: 0.5% auto 0;
 }
 
 #container {
@@ -32,6 +32,8 @@ body {
 
 figcaption {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: .85em;
 }
 
 #container figure.visible img {
