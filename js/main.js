@@ -1,9 +1,9 @@
 function previousImage() {
   console.log("previous image");
-  var currentImage = $( "img.visible" );
+  var currentImage = $( "figure.visible" );
   currentImage.removeClass("visible");
   if (currentImage.prev().length === 0) {
-    $("#container img:last").addClass("visible");
+    $("#container figure:last").addClass("visible");
   } else {
     currentImage.prev().addClass("visible");
   }
@@ -11,17 +11,23 @@ function previousImage() {
 
 function nextImage() {
   console.log("next image");
-  var currentImage = $( "img.visible" );
+  var currentImage = $( "figure.visible" );
   currentImage.removeClass("visible");
   if (currentImage.next().length === 0) {
-    $("#container img:first").addClass("visible");
+    $("#container figure:first").addClass("visible");
   } else {
     currentImage.next().addClass("visible");
   }
 }
 
+function alertMe() {
+  console.log("auto-scroll clicked");
+  setInterval(nextImage,2000);
+}
+
 $(".prev_button").click(previousImage);
 $(".next_button").click(nextImage);
+$(".auto-button").click(alertMe);
 
 // var container = $("#container");
 // var counter = 0;
