@@ -3,11 +3,12 @@ body {
 }
 
 #fixed-container {
-  margin: 0 auto;
+  margin: 0.5% auto 0;
   display: flex;
   width: 350px;
   height: 350px;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 10%;
 }
 
 #button-div {
@@ -38,6 +39,7 @@ figcaption {
 
 #container figure.visible img {
   width: 100%;
+  border-radius: 10%;
 }
 
 button {
